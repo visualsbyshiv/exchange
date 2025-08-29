@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="exchange.css">
+  <title>Currecey Exchange</title>
+</head>
+
+<body class=" pt-5 mt-5 ">
+   <video autoplay muted loop class="video-bg">
+    <source src="video.mp4" type="video/mp4">
+  
+  </video>
+
+  <div class="card  bg-dark mx-auto text-center text-white pt-2 mt-5" style="width: 30rem;">
+    <div class="card-body pt-5 ">
+      <input type="number" class="ps-2 ms-auto w-100 mb-5" placeholder="Enter Amount" id="amount">
+      <div class="d-flex " style="justify-content: center;">
+        <div class="">
+          <button class="dropdown btn btn-secondary dropdown-btn-toggle px-5" type="button" id="forButton"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            For Exchange
+          </button>
+          <ul class="dropdown-menu " aria-labelledby="forButton">
+            <li><a class="dropdown-item" onclick="selectExchange('USD','forButton')" href="#">USD</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('EUR','forButton')" href="#">EUR</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('GBP','forButton')" href="#">GBP</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('JPY','forButton')" href="#">JPY</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('CNY','forButton')" href="#">CNY</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('AUD','forButton')" href="#">AUD</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('CAD','forButton')" href="#">CAD</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('INR','forButton')" href="#">INR</a></li>
+          </ul>
+        </div>
+        <h1 class=" mx-4 fs-3 text-white fw-bolder">TO</h1>
+        <div class="">
+          <button class="dropdown btn btn-secondary dropdown-btn-toggle px-5" type="button" id="ToButton" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            To Exchange
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="ToButton">
+            <li><a class="dropdown-item" onclick="selectExchange('USD','ToButton')" href="#">USD</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('EUR','ToButton')" href="#">EUR</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('GBP','ToButton')" href="#">GBP</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('JPY','ToButton')" href="#">JPY</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('CNY','ToButton')" href="#">CNY</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('AUD','ToButton')" href="#">AUD</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('CAD','ToButton')" href="#">CAD</a></li>
+            <li><a class="dropdown-item" onclick="selectExchange('INR','ToButton')" href="#">INR</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <button type="button" class=" btn btn-primary w-75 mx-5 px-5 " id="convert"> currency Convert</button>
+    <div>
+      <p id="msg"></p>
+    </div>
+  </div>
+
+
+  <script src="change.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
